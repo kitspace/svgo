@@ -34,12 +34,29 @@ exports.fn = function(data) {
         if (item.isElem('use') && (item.hasAttr('href') || item.hasAttr('xlink:href'))) {
             var id = item.hasAttr('href') ? item.attr('href').value : item.attr('xlink:href').value;
             var def = defs[id];
+            if (def == null) {
+                return;
+            }
             var replacement = def.clone();
             replacement.removeAttr('id');
 
+            var x = item.hasAttr('x') && item.attr('x').value;
+            var y = item.hasAttr('y') && item.attr('y').value;
+
             item.removeAttr('xlink:href');
             item.removeAttr('href');
+            item.removeAttr('x');
+            item.removeAttr('y');
             item.renameElem('g');
+
+            if (x || y) {
+                item.addAttr({
+                    name: 'transform',
+                    value:  'translate(' + (x || 0) + ',' + (y || 0) + ')',
+                    prefix: '',
+                    local: 'transform'
+                });
+            }
 
             if (usedDefs.indexOf(def) === -1) {
                 usedDefs.push(def);

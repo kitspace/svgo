@@ -8,7 +8,7 @@
 @@@
 
 <svg xmlns="http://www.w3.org/2000/svg">
-    <g x="50" y="50">
+    <g transform="translate(50,50)">
         <path d="..." fill="#ff0000"/>
     </g>
 </svg>
