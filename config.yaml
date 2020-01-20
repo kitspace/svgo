@@ -1,0 +1,50 @@
+multipass: true
+
+plugins:
+  - addAttributesToSVGElement: false
+  - addClassesToSVGElement: false
+  - cleanupAttrs: false
+  - cleanupEnableBackground: false
+  - cleanupIDs: false
+  - cleanupListOfValues: false
+  - cleanupNumericValues: false
+  - collapseGroups: false
+  - convertColors: false
+  - convertPathData: false
+  - convertShapeToPath: false
+  - convertStyleToAttrs: false
+  - convertTransform: false
+  - mergePaths: false
+  - minifyStyles: false
+  - moveElemsAttrsToGroup: false
+  - moveGroupAttrsToElems: false
+  - removeAttrs: false
+  - removeComments: false
+  - removeDesc: false
+  - removeDimensions: false
+  - removeDoctype: false
+  - removeEditorsNSData: false
+  - removeElementsByAttr: false
+  - removeEmptyAttrs: false
+  - removeEmptyContainers: false
+  - removeEmptyText: false
+  - removeHiddenElems: false
+  - removeMetadata: false
+  - removeNonInheritableGroupAttrs: false
+  - removeRasterImages: false
+  - removeStyleElement: false
+  - removeTitle: false
+  - removeUnknownsAndDefaults: false
+  - removeUnusedNS: false
+  - removeUselessDefs: true
+  - removeUselessStrokeAndFill: false
+  - removeViewBox: false
+  - removeXMLNS: false
+  - removeXMLProcInst: false
+  - sortAttrs: false
+  - transformsWithOnePath: false
+  - replaceUse: true
+
+js2svg:
+  pretty: true
+  indent: '  '
